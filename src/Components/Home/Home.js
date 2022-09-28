@@ -27,7 +27,7 @@ const Home = () => {
                <img src={photo} alt="" />
                 <h1 className='name'>Fitness And Strength</h1>
                </div>
-                <h2>Select today's Exercise :</h2>
+                <h2 className='select'>Select today's Exercise :</h2>
                 <div className='cart-list'>
                 {
                     carts.map(cart=><Cart 
