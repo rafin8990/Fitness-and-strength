@@ -2,7 +2,16 @@ import React from 'react';
 import './Information.css'
 import pic from '../../rrrrrrr.jpg'
 
-const Information = () => {
+const Information = (props) => {
+    const {newCarts}=props
+    let totalTime=0
+    for(const newCart of newCarts){
+        console.log(newCart)
+        totalTime= totalTime + newCart.time
+
+    }
+  
+
     return (
         <div className='info'>
             {/* profile picture & name & address */}
@@ -37,7 +46,7 @@ const Information = () => {
         <div className='exercise'>
             <h1>Exercise Details</h1>
             <div  className='exercise-area1'>
-            <h3>Exercise Time:  <small>Minutes</small></h3>
+            <h3>Exercise Time:{totalTime} <small>Minutes</small></h3>
             </div>
             <div className='exercise-area2'>
                 <h3>Break Time:  <small>Minutes</small></h3>

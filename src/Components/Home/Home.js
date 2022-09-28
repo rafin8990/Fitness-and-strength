@@ -6,11 +6,18 @@ import Information from '../Information/Information';
 
 const Home = () => {
     const [carts,setCart]=useState([])
+    const [newCart, setNewCart]=useState([])
+
     useEffect(()=>{
         fetch('fakedata.json')
         .then(res=>res.json())
         .then(data=>setCart(data))
     },[])
+    const handdleAddToList=(cart)=>{
+        // console.log(cart)
+        const addNewCart=[...newCart, cart];
+        setNewCart(addNewCart);
+    }
     // console.log(carts)
     return (
         <div className='home'>
@@ -23,14 +30,20 @@ const Home = () => {
                 <h2>Select today's Exercise :</h2>
                 <div className='cart-list'>
                 {
-                    carts.map(cart=><Cart cart={cart} KEY={cart._id}></Cart>)  
+                    carts.map(cart=><Cart 
+                        cart={cart} 
+                        KEY={cart._id}
+                        handdleAddToList={handdleAddToList}
+                        ></Cart>)  
                 }
                 </div>
                 
                 
             </div>
             <div className="information-container">
-                <Information></Information>
+               <Information
+               newCarts={newCart}
+               ></Information>
             </div>
         </div>
     );
