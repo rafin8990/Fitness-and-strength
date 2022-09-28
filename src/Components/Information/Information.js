@@ -1,8 +1,11 @@
 import React from 'react';
 import './Information.css'
 import pic from '../../rrrrrrr.jpg'
+import { ToastContainer, toast } from 'react-toastify';
+  import 'react-toastify/dist/ReactToastify.css';
 
 const Information = (props) => {
+    const notify = () => toast("Congratulations!!! You have Completed the task!!");
     const {newCarts}=props
     let totalTime=0
     for(const newCart of newCarts){
@@ -56,9 +59,10 @@ const Information = (props) => {
 
         {/* activity complited button  */}
         <div className='btn-completed'>
-        <button className='btn-activity'>
+        <button onClick={notify} className='btn-activity'>
             <p>Activity Completed</p>
         </button>
+        <ToastContainer />
         </div>
 
         </div>
