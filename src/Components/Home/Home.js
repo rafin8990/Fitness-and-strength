@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Cart from '../Cart/Cart';
 import './Home.css'
 import photo from '../../image.png'
+import Information from '../Information/Information';
 
 const Home = () => {
     const [carts,setCart]=useState([])
@@ -19,7 +20,7 @@ const Home = () => {
                <img src={photo} alt="" />
                 <h1 className='name'>Fitness And Strength</h1>
                </div>
-                <h3>Select today's Exercise :</h3>
+                <h2>Select today's Exercise :</h2>
                 <div className='cart-list'>
                 {
                     carts.map(cart=><Cart cart={cart} KEY={cart._id}></Cart>)  
@@ -29,7 +30,7 @@ const Home = () => {
                 
             </div>
             <div className="information-container">
-                <h2>information</h2>
+                <Information></Information>
             </div>
         </div>
     );

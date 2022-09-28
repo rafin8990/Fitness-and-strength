@@ -12,11 +12,12 @@
     width: 100px;
 }
 .name{
-    color: blue;
+    color: blueviolet;
     text-align: center;
 }
 .cart-container{
-   margin-top: 20px;
+   
+   background-color:lavender;
 
 }
 .cart-list{
