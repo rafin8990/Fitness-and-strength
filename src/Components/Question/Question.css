@@ -4,6 +4,7 @@
     padding-left: 20px;
     padding-right: 20px;
     margin: 0 10px;
+    border-radius: 10px;
 }
 .quention-two{
     background-color: lavender; 
@@ -11,6 +12,7 @@
     padding-left: 20px;
     padding-right: 20px;
     margin: 0 10px;
+    border-radius: 10px;
 }
 .quention-three{
     background-color: lavender;
@@ -18,6 +20,8 @@
     padding-left: 20px;
     padding-right: 20px;
     margin: 0 10px;
+    border-radius: 10px;
+
 }
 .question{
     margin-top: 20px;
