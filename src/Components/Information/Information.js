@@ -49,10 +49,10 @@ const Information = (props) => {
         <div className='exercise'>
             <h1>Exercise Details</h1>
             <div  className='exercise-area1'>
-            <h3>Exercise Time:{totalTime} <small>Minutes</small></h3>
+            <p>Exercise Time:{totalTime} <small>Minutes</small></p>
             </div>
             <div className='exercise-area2'>
-                <h3>Break Time:  <small>Minutes</small></h3>
+                <p>Break Time:  <small>Minutes</small></p>
             </div>
             
         </div>
