@@ -6,7 +6,7 @@ import { ToastContainer, toast } from 'react-toastify';
 
 const Information = (props) => {
     const notify = () => toast("Congratulations!!! You have Completed the task!!");
-   const [breakTime,setBreakTime]=useState('')
+   const [breakTime,setBreakTime]=useState('0')
     const onClick = event => {
     const newTime=event.target.innerText
     setBreakTime(newTime)
@@ -16,11 +16,8 @@ const Information = (props) => {
         const localstorageData = localStorage.getItem('break-time')
         setBreakTime(localstorageData)
         },[])
-      
-       
-       
-      
-    
+
+
     const {newCarts}=props
     let totalTime=0
     for(const newCart of newCarts){
