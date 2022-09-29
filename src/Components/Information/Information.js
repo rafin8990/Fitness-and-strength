@@ -6,7 +6,7 @@ import { ToastContainer, toast } from 'react-toastify';
 
 const Information = (props) => {
     const notify = () => toast("Congratulations!!! You have Completed the task!!");
-   const [breakTime,setBreakTime]=useState('0')
+   const [breakTime,setBreakTime]=useState('')
     const onClick = event => {
     const newTime=event.target.innerText
     setBreakTime(newTime)
