@@ -43,6 +43,12 @@ const Information = (props) => {
         {/* Add a break area  */}
         <div className='exercise'>
             <h2>Add A Break</h2>
+            <div className='btn-area'>
+                <button className='btn-minute-10'><p>10 min</p> </button>
+                <button className='btn-minute-20'><p>20 min</p></button>
+                <button className='btn-minute-30'><p>30 min</p></button>
+                <button className='btn-minute-40'><p>40 min</p></button>
+            </div>
 
         </div>
         {/* exercise details  */}
@@ -52,7 +58,7 @@ const Information = (props) => {
             <p>Exercise Time:{totalTime} <small>Minutes</small></p>
             </div>
             <div className='exercise-area2'>
-                <p>Break Time:  <small>Minutes</small></p>
+                <p>Break Time:  </p>
             </div>
             
         </div>

@@ -56,3 +56,41 @@
     display: flex;
     justify-content: center;
 }
+.btn-area{
+    background-color:lavender ;
+    padding: 30px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 10px;
+    
+   
+}
+.btn-minute-10{
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 25px;
+   margin-left: 20px;
+   
+}
+.btn-minute-20{
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 25px;
+    margin-left: 20px;
+}
+.btn-minute-30{
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 25px;
+    margin-left: 20px;
+}
+.btn-minute-40{
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 25px;
+    margin-left: 20px;
+}
