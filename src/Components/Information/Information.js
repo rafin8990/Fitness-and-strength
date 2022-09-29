@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './Information.css'
 import pic from '../../rrrrrrr.jpg'
 import { ToastContainer, toast } from 'react-toastify';
@@ -6,6 +6,21 @@ import { ToastContainer, toast } from 'react-toastify';
 
 const Information = (props) => {
     const notify = () => toast("Congratulations!!! You have Completed the task!!");
+   const [breakTime,setBreakTime]=useState('')
+    const onClick = event => {
+    const newTime=event.target.innerText
+    setBreakTime(newTime)
+     localStorage.setItem('break-time', newTime)
+     }
+     useEffect(()=>{
+        const localstorageData = localStorage.getItem('break-time')
+        setBreakTime(localstorageData)
+        },[])
+      
+       
+       
+      
+    
     const {newCarts}=props
     let totalTime=0
     for(const newCart of newCarts){
@@ -44,10 +59,10 @@ const Information = (props) => {
         <div className='exercise'>
             <h2>Add A Break</h2>
             <div className='btn-area'>
-                <button className='btn-minute-10'><p>10 min</p> </button>
-                <button className='btn-minute-20'><p>20 min</p></button>
-                <button className='btn-minute-30'><p>30 min</p></button>
-                <button className='btn-minute-40'><p>40 min</p></button>
+                <button  onClick={onClick} className='btn-minute-10'><p>10 min</p> </button>
+                <button onClick={onClick} className='btn-minute-20'><p>20 min</p></button>
+                <button onClick={onClick} className='btn-minute-30'><p>30 min</p></button>
+                <button  onClick={onClick}className='btn-minute-40'><p>40 min</p></button>
             </div>
 
         </div>
@@ -58,7 +73,7 @@ const Information = (props) => {
             <p>Exercise Time:{totalTime} <small>Minutes</small></p>
             </div>
             <div className='exercise-area2'>
-                <p>Break Time:  </p>
+                <p>Break Time:{breakTime} </p>
             </div>
             
         </div>
